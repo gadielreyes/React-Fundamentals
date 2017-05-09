@@ -1,8 +1,7 @@
-var React = require('react');
-var styles = require('../styles');
-var PropTypes = React.PropTypes;
+import { container, content } from '../styles'
+import React, { PropTypes } from 'react'
 
-var Loading = React.createClass({
+const Loading = React.createClass({
   propTypes: {
     text: PropTypes.string,
     speed: PropTypes.number
@@ -20,7 +19,7 @@ var Loading = React.createClass({
     }
   },
   componentDidMount: function () {
-    var stopper = this.originalText + '...';
+    const stopper = this.originalText + '...';
     this.interval = setInterval(function () {
       if (this.state.text === stopper) {
         this.setState({
@@ -38,11 +37,11 @@ var Loading = React.createClass({
   },
   render: function () {
     return (
-      <div style={styles.container}>
-        <p style={styles.content}>{this.state.text}</p>
+      <div style={container}>
+        <p style={content}>{this.state.text}</p>
       </div>
     )
   }
 });
 
-module.exports = Loading;
+export default Loading

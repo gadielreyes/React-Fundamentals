@@ -1,4 +1,4 @@
-var React = require('react');
+import React from 'react'
 
 function UserDetailsWrapper (props) {
 	return (
@@ -9,4 +9,4 @@ function UserDetailsWrapper (props) {
 	)
 }
 
-module.exports = UserDetailsWrapper;
+export default UserDetailsWrapper
