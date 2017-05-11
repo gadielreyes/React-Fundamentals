@@ -7,7 +7,8 @@ var HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 module.exports = {
 	entry: [
-	'./app/index.js'
+		'babel-polyfill',
+		'./app/index.js'
 	],
 	output: {
 		path: __dirname + '/dist',
